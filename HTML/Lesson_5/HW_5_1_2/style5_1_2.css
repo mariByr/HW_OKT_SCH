@@ -1,0 +1,35 @@
+body{
+    height: 100vh;
+    background: deepskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 200px;
+    height: 200px;
+    animation: flag 3s infinite alternate;
+}
+@keyframes flag {
+    from {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(30px, 30px);
+    }
+   20% {
+        transform: translate(60px, -30px);
+    }
+   40% {
+        transform: translate(120px, 30px);
+    }
+    60% {
+        transform: translate(180px, -30px);
+    }
+   80% {
+        transform: translate(240px, 30px);
+    }
+    to {
+        transform: translate(300px, 0);
+    }
+}
