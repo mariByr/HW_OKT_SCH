@@ -8,6 +8,10 @@
 }
 body{
     background: #1E1E1E;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .w-1340{
     width: 1340px;
@@ -16,7 +20,10 @@ body{
     align-items: center;
     flex-direction: column;
 }
-nav{
+header{
+    width: 100%;
+}
+header nav{
     width: 100%;
     padding-top: 36px;
     display: flex;
@@ -47,9 +54,16 @@ ul a{
     width: 203px;
     height: 60px;
     background: #B3A0CD;
-    color: #1E1E1E;;
+    color: #1E1E1E;
 }
-.header-title{
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.underheader-title{
     width: 1255px;
     color: #E9E3DC;
     text-align: center;
@@ -62,7 +76,7 @@ ul a{
     text-transform: uppercase;
     margin: 72px 0 33px 0 ;
 }
-.header-img{
+.underheader-img{
     display: block;
     }
 .section__about-burger{
@@ -131,7 +145,7 @@ ul a{
     font-weight: 400;
     line-height: 101.896%; /* 71.328px */
     text-transform: uppercase;
-    margin: 64px 0 33px 0 ;
+    margin: 64px auto 33px auto;
 }
 .button-get-started{
     width: 196px;
