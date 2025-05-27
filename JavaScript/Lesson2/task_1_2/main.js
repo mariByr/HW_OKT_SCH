@@ -14,4 +14,4 @@ console.log(arr[10]);
 
 let book_1 = {title: "A", pageCount: 540, genre: "fiction"};
 let book_2 = {title: "B", pageCount: 720, genre: "fiction"};
-let book_3 = {title: "C", pageCoun : 150, genre: "fiction"};
+let book_3 = {title: "C", pageCount : 150, genre: "fiction"};
