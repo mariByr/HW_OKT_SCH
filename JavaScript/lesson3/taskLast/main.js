@@ -231,23 +231,23 @@ let usersList = [
     }
 ];
 for (const user of usersList) {
- document.write(` <div class=”users-box”>
+ document.write(`<div class=”users-box”>
 
             <div class=”user-block”>
 
-                <h2>ID – NAME – USERNAME </h2>
+                <h2>${user.id} –${user.name} – ${user.username} </h2>
 
-                <h3>EMAIL – PHONE</h3>
+                <h3>${user.email} –${user.phone}</h3>
 
                 <div class=”address-block”>
 
-                    <p>City – ADDRESS.CITY</p>
+                    <p>City –${user.address.city}</p>
 
-                    <p>Street – ADDRESS.STREET</p>
+                    <p>Street –${user.address.street}</p>
 
-                    <p>Suite – ADDRESS.SUITE</p>
+                    <p>Suite –${ user.address.suite}</p>
 
-                    <p>Zip code – ADDRESS.ZIPCODE</p>
+                    <p>Zip code –${ user.address.zipcode}</p>
 
                 </div>
 
