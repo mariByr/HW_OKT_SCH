@@ -230,14 +230,14 @@ let usersList = [
         }
     }
 ];
+document.write( `<div class="users-box">`)
+
 for (const user of usersList) {
- document.write(`<div class="grid-conteiner"><div class=”users-box”>
+ document.write(` <div class=”user-block”>
  
-             <div class=”user-block”>
+                 <h2>ID-${user.id} NAME–${user.name} USERNAME– ${user.username} </h2>
  
-                 <h2>${user.id} –${user.name} – ${user.username} </h2>
- 
-                 <h3>${user.email} –${user.phone}</h3>
+                 <h3>EMAIL-${user.email} PHONE–${user.phone}</h3>
  
                  <div class=”address-block”>
  
@@ -245,11 +245,12 @@ for (const user of usersList) {
  
                      <p>Street –${user.address.street}</p>
  
-                     <p>Suite –${ user.address.suite}</p>
+                     <p>Suite -${ user.address.suite}</p>
  
                      <p>Zip code –${ user.address.zipcode}</p>
  
                  </div>
  
-             </div></div>`)
+             </div>`)
 }
+document.write(`</div`)
