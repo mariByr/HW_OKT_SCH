@@ -23,7 +23,7 @@
 // }
 
 let cardSuits = ['spade', 'diamond','heart','clubs' ];
-let values = [6, 7, 8, 9, 10, 'ace','jack','queen','king'];
+let values = ['6', '7', '8', '9', '10', 'ace','jack','queen','king'];
 let deck= []
 
         for (const cardSuit of cardSuits) {
@@ -42,7 +42,7 @@ let deck= []
         }
   console.log(deck);
         console.log(deck.find(card=>card.suit==='clubs'&& card.value==='ace'));
-        allSix= deck.filter(card=>card.value === 6);
+        allSix= deck.filter(card=>card.value === '6');
         console.log(allSix);
         allRedCards = deck.filter(card=>card.color === 'red');
         console.log(allRedCards);
@@ -50,3 +50,12 @@ let deck= []
         console.log(allDiamonds);
         allClubs = deck.filter(card=>card.suit==='clubs' );
         console.log(allClubs);
+
+#EP5I1UUzAX
+
+// Взяти описану колоду карт, та за допомогою reduce “упакувати” всі карти по “мастях” в об’єкт
+// Приклад моделі кінцевого об’єкту
+// {spades[],
+    // diamonds:[],
+    // hearts:[],
+    // clubs:[]
