@@ -48,10 +48,13 @@ let deck= []
         console.log(allRedCards);
         allDiamonds = deck.filter(card=>card.suit === 'diamond');
         console.log(allDiamonds);
-        allClubs = deck.filter(card=>card.suit==='clubs' );
-        console.log(allClubs);
+         let allHight =['9', '10',  'ace','jack','queen','king']
 
-#EP5I1UUzAX
+         hightClubs = deck.filter(card=>card.suit==='clubs' &&
+         allHight.includes(card.value));
+         console.log(hightClubs);
+
+// #EP5I1UUzAX
 
 // Взяти описану колоду карт, та за допомогою reduce “упакувати” всі карти по “мастях” в об’єкт
 // Приклад моделі кінцевого об’єкту
@@ -59,3 +62,9 @@ let deck= []
     // diamonds:[],
     // hearts:[],
     // clubs:[]
+ const groupCards = deck.reduce((acc, card)=> {
+     if (!acc[card.suit]) acc[card.suit] = [];
+     acc[card.suit].push(card.value);
+     return acc;
+ }, {});
+ console.log(groupCards);
