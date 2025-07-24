@@ -52,7 +52,8 @@ let deck= []
 
          hightClubs = deck.filter(card=>card.suit==='clubs' &&
          allHight.includes(card.value));
-         console.log(hightClubs);
+         console.log(hightClubs
+         );
 
 // #EP5I1UUzAX
 
@@ -63,7 +64,9 @@ let deck= []
     // hearts:[],
     // clubs:[]
  const groupCards = deck.reduce((acc, card)=> {
-     if (!acc[card.suit]) acc[card.suit] = [];
+     if (!acc[card.suit]) {
+         acc[card.suit] = [];
+     }
      acc[card.suit].push(card.value);
      return acc;
  }, {});
