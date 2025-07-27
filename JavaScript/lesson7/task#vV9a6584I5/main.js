@@ -17,23 +17,23 @@ function Car(model, produser, year,maxSpeed, volumeEngine){
     this.year = year;
     this.maxSpeed = maxSpeed;
     this.volumeEngine = volumeEngine;
-    this.drive = function(){console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)}
-    this.info = function(){
-        for (const key of this) {
-            console.log(key, this[key]!=='function');
-        }
-    this.increaseMaxSpeed = function (newSpeed) {
-        this.maxSpeed =  this.maxSpeed+newSpeed};
-    this. changeYear = function (year){
-     if(year>1815) this.year = year
-    };
-    this.addDriver = function (driver) {
-        if (driver) this.driver = driver;
+    // this.drive = function(){console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)}
+    // this.info = function(){
+    //     for (const key of this) {
+    //         console.log(key, this[key]!=='function');
+    //     }
+    // this.increaseMaxSpeed = function (newSpeed) {
+    //     this.maxSpeed =  this.maxSpeed+newSpeed};
+    // this. changeYear = function (year){
+    //  if(year>1815) this.year = year
+    // };
+    // this.addDriver = function (driver) {
+    //     if (driver) this.driver = driver;
 
-    }
-        }
-    const car1= new Car('Skoda', 'Skoda Auto', 1998, 170,  1,4 );
-     console.log(car);
+    // }
+        
+
+
     // car.drive();
     // car.info();
     // car.increaseMaxSpeed(100)
