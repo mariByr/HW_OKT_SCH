@@ -20,7 +20,7 @@ function Car(model, produser, year,maxSpeed, volumeEngine){
     this.drive = function(){console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)}
     this.info = function(){
         for (const key of this) {
-            console.log(key, this[key]);
+            console.log(key, this[key]!=='function');
         }
     this.increaseMaxSpeed = function (newSpeed) {
         this.maxSpeed =  this.maxSpeed+newSpeed};
@@ -32,7 +32,7 @@ function Car(model, produser, year,maxSpeed, volumeEngine){
 
     }
         }
-    let car= new Car('Skoda', 'Skoda Auto', 1998, 170,  1,4 );
+    const car= new Car('Skoda', 'Skoda Auto', 1998, 170,  1,4 );
     console.log(car);
     car.drive();
     car.info();
