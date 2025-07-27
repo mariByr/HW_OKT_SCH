@@ -32,14 +32,14 @@ function Car(model, produser, year,maxSpeed, volumeEngine){
 
     }
         }
-    const car= new Car('Skoda', 'Skoda Auto', 1998, 170,  1,4 );
-    console.log(car);
-    car.drive();
-    car.info();
-    car.increaseMaxSpeed(100)
-    car.changeYear(2015)
-    car.addDriver({})
-    console.log(car)
+    const car1= new Car('Skoda', 'Skoda Auto', 1998, 170,  1,4 );
+     console.log(car);
+    // car.drive();
+    // car.info();
+    // car.increaseMaxSpeed(100)
+    // car.changeYear(2015)
+    // car.addDriver({})
+    // console.log(car)
 
 
 }
