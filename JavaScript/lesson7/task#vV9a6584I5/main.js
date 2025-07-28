@@ -19,7 +19,7 @@ function Car(mode, produser, year,maxSpeed, volumeEngine){
     this.drive = function(){console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`)}
     this.info = function() {
         for (const key in this) {
-            console.log(key, this[key]);
+            console.log(key, this[key] !== 'function');
         }
     };
         this.increaseMaxSpeed = function (newSpeed) {
