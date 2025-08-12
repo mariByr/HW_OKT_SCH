@@ -1,0 +1,16 @@
+/*/ – додати йому класи wrap, collapse, alpha, beta
+//
+// – додати стилі (довільні значення) : колір фону, колір тексту, розмір тексту*/
+.wrap{
+    width: 200px;
+    height: 200px;
+}
+.collapse{
+    font-size: 24px;
+}
+.alpha{
+  color: blue;
+}
+.beta{
+    background-color: #80D2C4;
+}
