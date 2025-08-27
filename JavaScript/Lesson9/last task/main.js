@@ -77,23 +77,29 @@ for (const course of coursesArray) {
     course.innerHTML = course;
     const title = document.createElement('h2');
     title.classList.add('title');
-    title.innerText = course.title;
+    title.innerText = `Title: ${ course.title}`;
     const durations = document.createElement('div');
-    durations.classList.add('duration');
+    durations.classList.add('durations');
     const monthDuration = document.createElement('p');
     monthDuration.classList.add('monthDuration');
-    monthDuration.innerText = `monthDuration:${course.monthDuration}`;
+    monthDuration.innerText = `monthDuration: ${course.monthDuration}`;
     const hourDuration = document.createElement('p');
     hourDuration.classList.add('hourDuration');
-    hourDuration.innerText = `hourDuration:${course.hourDuration}`;
+    hourDuration.innerText = `hourDuration: ${course.hourDuration}`;
     durations.append(monthDuration, hourDuration);
     const ul = document.createElement('ul')
-    ul.classList.add('modules')
-    for (const module of course.modules) {
+    ul.classList.add('modulesList')
+    const firstLi = document.createElement('li');
+   firstLi.innerHTML = `Modules: ${ course.modules[0] }`;
+    firstLi.classList.add('liStart');
+    ul.appendChild(firstLi);
+    for (let i = 1; i < course.modules.length; i++) {
         const moduleElement = document.createElement('li');
-        moduleElement.innerText = module;
-        ul.appendChild(moduleElement);
+        moduleElement.innerText = course.modules[i];
+        moduleElement.classList.add('moduleElement');
+         ul.appendChild(moduleElement);
     }
-    div.append(title, monthDuration, hourDuration, ul);
+
+    div.append(title, durations,ul);
     document.body.appendChild(div)
 }
