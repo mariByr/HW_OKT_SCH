@@ -8,7 +8,7 @@ const recipes = [
     {name: 'Pasta Pesto',
         prepMinutes: 20,
         calories: 460,
-        ingredients: ['spaghetti', 'basil pesto', 'parmesan', 'pine nuts', ]
+        ingredients: ['spaghetti', 'basil pesto', 'parmesan', 'pine nuts',]
 
     },
     {
@@ -22,32 +22,38 @@ const recipes = [
         prepMinutes: 10,
         calories: 310,
         ingredients: ['eggs', 'spinach', 'mushrooms', 'onion ', 'butter']
-
-    }
+    },
 ]
 
 const pageRecipes = document.createElement('div');
 pageRecipes.classList.add('recipes');
 for (const recipe of recipes) {
-const recipe=document.createElement('div');
-recipe.classList.add('recipe');
+const recipeDiv=document.createElement('div');
+recipeDiv.classList.add('recipe');
 const title = document.createElement('h2');
 title.classList.add('recipe-title');
-title.innerText =recipe.name;
+title.innerText =`Title: ${recipe.name}`;
+const divDescription = document.createElement('div');
+divDescription.classList.add('divDescription');
 const cookingTime=document.createElement('p');
 cookingTime.classList.add('cookingTime');
-cookingTime.innerText=recipe.prepMinutes;
+cookingTime.innerText=`prep(min) ${recipe.prepMinutes}`;
 const calories=document.createElement('p');
 calories.classList.add('calories');
-calories.innerText=recipe.calories;
-const ingredients=document.createElement('ul');
-ingredients.classList.add('ingredients');
-    for (const ingredient of ingredients) {
-        const ingredient=document.createElement('p');
-        ingridient.classList.add('ingridient');
-        ingridient
+calories.innerText=`kcal ${recipe.calories}`;
+divDescription.append(cookingTime, calories);
+const headInhrid= document.createElement('h3');
+headInhrid.classList.add('headInhrid');
+headInhrid.innerText='Ingredients:';
+const ul=document.createElement('ul');
+ul.classList.add('ingredients');
+    for (const ingredient of recipe.ingredients) {
+        const scladnuk=document.createElement('li');
+        scladnuk.classList.add('ingridient');
+        scladnuk.innerText=ingredient;
+               ul.appendChild(scladnuk);
 
     }
-recipe.append(title, cookingTime, ingredients);
-pageRecipes.appendChild(recipe);
-document.body.appendChild(pageRecipes);}
+recipeDiv.append(title,divDescription,headInhrid, ul);
+pageRecipes.appendChild(recipeDiv);}
+document.body.appendChild(pageRecipes);

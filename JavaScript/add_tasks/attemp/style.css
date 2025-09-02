@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: "Inter", sans-serif;
+
+}
+.recipes{
+    margin: 12px auto;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+
+}
+.recipe{
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.divDescription{
+    margin-top: 10px;
+    display: flex;
+    gap: 30px;
+}
+.cookingTime{
+
+}
+.calories{
+    border: 1px solid black;
+
+}
+.ingredients{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+.headInhrid{
+    margin: 10px 0 10px 0;
+}
+.ingridient{
+    border: 1px solid black;
+    padding: 8px;
+}
