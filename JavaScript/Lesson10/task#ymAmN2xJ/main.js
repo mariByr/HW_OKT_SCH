@@ -11,8 +11,9 @@ someForm.addEventListener('submit', e => {
     let obj = {
         nameValue, surnameValue, ageValue,}
     console.log(obj);
-        target.innerText = obj.nameValue
-            + ' ' + obj.surnameValue + ' '+ obj.ageValue
+        // target.innerText = obj.nameValue
+        //     + ' ' + obj.surnameValue + ' '+ obj.ageValue
 
-
+    target.innerText =`${obj.nameValue}
+         ${obj.surnameValue} ${obj.ageValue}`
 })
