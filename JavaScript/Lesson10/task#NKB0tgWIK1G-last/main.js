@@ -9,7 +9,7 @@
 
 const items= Array.from({length:100}, (_,i) => `Item ${i+1} `);
 const pageSize= 10;
-const currentPage=0;
+let currentPage=0;
 function render () {
     const list = document.getElementById('list');
     list.innerText= '';
@@ -22,3 +22,18 @@ function render () {
     list.appendChild(div);
     })
 }
+document.getElementById('prev').onclick =
+    function () {
+        if (currentPage > 0) {
+            currentPage--;
+            render();
+        }
+    }
+    document.getElementById('next').onclick =function () {
+    if (currentPage < items.length/ pageSize-1) {
+    currentPage++;
+    render()
+        }
+
+    }
+    render();
