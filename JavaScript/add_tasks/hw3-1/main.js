@@ -1,10 +1,15 @@
 
+//ЗАДАЧА НА СТВОРЕННЯ ОДНОГО МАСИВУ З ОБЄКТАМИ НА ОСНОВІ ДВОХ ТА НА СТВОРЕННЯ  ОБЄКТА НА ОСНОВІ КОПІЇ ІНШОГО ТА ПУШЕННЯ ОБЄКТІВ В МАСИВ
+
+
+
 //– Дано 2 масиви з рівною кількістю об’єктів.
 //
 // Масиви:
 //З’єднати в один об’єкт користувача та місто з відповідними “id” та “user_id”.
 //
 // Записати цей об’єкт в новий масив
+//
 
 let usersWithId = [
     {id: 1, name: 'vasya', age: 31, status: false},
@@ -30,7 +35,7 @@ for (const user of usersWithId) {
     for (const location of  citiesWithId) {
         let user_id = location.user_id;
         if(id === user_id) {
-            userCopy.location.push(location);
+            userCopy.location.push(location.city);
         }
 }
     usersWithIdcities.push(userCopy);
