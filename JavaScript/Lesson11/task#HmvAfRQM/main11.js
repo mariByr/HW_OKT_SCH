@@ -1,4 +1,3 @@
-
 //– взяти https://dummyjson.com/docs/carts та вивести інформацію про всі корзини. Відобразити всі поля кожної корзини
  const cartsDiv = document.querySelector('#carts')
 fetch('https://dummyjson.com/carts')
@@ -23,9 +22,8 @@ fetch('https://dummyjson.com/carts')
           "title":${product.title}, 
           "quantity":${product.quantity}, ,
           "total":${product.total},
-          "discountPercentage":${product.discountPercentage}, ,
-          "discountedTotal":${product.discountedTotal}, 
-          `
+          "discountPercentage":${product.discountPercentage}, 
+          "discountedTotal":${product.discountedTotal},`
                 const img = document.createElement("img");
                 img.src=product.thumbnail;
                 li.append(img,info)
