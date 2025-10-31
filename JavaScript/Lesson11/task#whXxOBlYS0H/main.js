@@ -4,8 +4,7 @@ fetch('https://dummyjson.com/recipes')
     .then(value => value.json())
     .then(recipesObject => {console.log(recipesObject);
     const {recipes} = recipesObject;
-    console.log(recipes);
-    for (const recipe of recipes){
+       for (const recipe of recipes){
         const recipDiv = document.createElement('div');
         recipDiv.classList.add('recipe');
         const divIdName=document.createElement('div');
